@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "noechestenderegg",
+	"version": "${version}",
+	"name": "noechestEnderegg",
+	"description": "Ender/Dragon Egg E-chest mod for SMPs",
+	"authors": [
+		"Malevolenced"
+	],
+	"contact": {
+		"homepage": "https://malevolenced.net/",
+		"sources": "https://github.com/Malevolenced12/Anti-Ender-Egg-Echesting-1.21.5"
+	},
+	"license": "MIT",
+	"icon": "assets/noechestenderegg/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.malevolenced.noechestenderegg.NoechestEnderegg"
+		],
+		"fabric-datagen": [
+			"net.malevolenced.noechestenderegg.NoechestEndereggDataGenerator"
+		],
+		"client": [
+			"net.malevolenced.noechestenderegg.noechestEndereggClient"
+	},,
+	"mixins": [
+		"noechestenderegg.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.11",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
