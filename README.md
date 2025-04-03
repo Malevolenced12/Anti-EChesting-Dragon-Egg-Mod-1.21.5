@@ -11,7 +11,7 @@ This mod is made for most SMPs where the Dragon Egg is precious to all players. 
 - End of life
 - This mod will be discontinued
 
-More features will **NOt** be added.
+More features will **NOT** be added.
 
 ## Commands
 
@@ -22,7 +22,7 @@ You can edit the mod config by going into the `config` directory and then openin
 
 ```json
 {
-  "noDragonEggEnderChest": true,
+  "noDragonEggEnderChest": true
 }
 ```
 

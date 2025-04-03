@@ -6,6 +6,7 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -18,12 +19,18 @@ import net.minecraft.client.sound.OggAudioStream;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.item.ItemUsageContext;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class RadioItem extends Item {
     public RadioItem(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("item.noechestenderegg.radio.tooltip").formatted(Formatting.GOLD));
     }
 
     @Override
@@ -35,14 +42,14 @@ public class RadioItem extends Item {
 
             return ActionResult.SUCCESS;
         }
-    public static void registerTooltipCallback() {
-        ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
-            // Check if the item is an instance of RadioItem
-            if (!itemStack.isOf(ModItems.RADIO)) {
+        public static void registerTooltipCallback() {
+            ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
+                // Check if the item is an instance of RadioItem
+                if (!itemStack.isOf(ModItems.RADIO)) {
 
-                return;
-            }
-            list.add(Text.translatable("item.noechestenderegg_radio.tooltip").formatted(Formatting.GOLD));
-        });
-    }
+                    return;
+                }
+                list.add(Text.translatable("item.noechestenderegg_radio.tooltip").formatted(Formatting.GOLD));
+            });
+        }
 }
