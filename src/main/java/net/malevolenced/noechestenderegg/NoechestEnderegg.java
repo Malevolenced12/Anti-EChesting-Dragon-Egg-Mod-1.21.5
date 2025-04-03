@@ -1,6 +1,10 @@
 package net.malevolenced.noechestenderegg;
-
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.entity.event.v1.EntityElytraEvents;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
 import net.malevolenced.noechestenderegg.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,21 +38,31 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
+import java.util.Optional;
+
 public class NoechestEnderegg implements ModInitializer {
 	public static final String MOD_ID = "noechestenderegg";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
+
+		Registry.register(Registries.SOUND_EVENT, Identifier.of(MOD_ID, "ksi"),
+				SoundEvent.of(Identifier.of(MOD_ID, "ksi")));
+
 		ModItems.registerModItems();
 		registerConfig();
 		registerEvents();
 		registerCommands();
+		ModItems.CustomSounds.initialize();
 	}
+
 
 	private void registerConfig() {
 		AutoConfig.register(ModConfig.class, GsonConfigSerializer::new); // Directly instantiate the serializer
 	}
+
+
 
 	private void registerEvents() {
 		// Register the server tick event to handle the Ender Chest check
