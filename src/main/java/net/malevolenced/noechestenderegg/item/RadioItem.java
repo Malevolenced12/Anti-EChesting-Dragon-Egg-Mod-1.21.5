@@ -38,11 +38,11 @@ public class RadioItem extends Item {
     public static void registerTooltipCallback() {
         ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
             // Check if the item is an instance of RadioItem
-            if (!(itemStack.getItem() instanceof RadioItem)) {
+            if (!itemStack.isOf(ModItems.RADIO)) {
+
                 return;
             }
-            // Add the custom tooltip for the RadioItem
-            list.add(Text.translatable("noechestenderegg.radio.tooltip").formatted(Formatting.GOLD));
+            list.add(Text.translatable("item.noechestenderegg_radio.tooltip").formatted(Formatting.GOLD));
         });
     }
 }
