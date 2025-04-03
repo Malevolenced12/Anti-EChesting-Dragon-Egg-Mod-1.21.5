@@ -11,6 +11,7 @@ base {
 }
 
 repositories {
+	maven { url "https://maven.shedaniel.me/" }
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -32,6 +33,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modApi "me.shedaniel.cloth:cloth-config-fabric:18.0.145"
 	
 }
 
@@ -81,4 +83,14 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+tasks.withType(JavaCompile) {
+	options.compilerArgs += "--enable-preview"
 }

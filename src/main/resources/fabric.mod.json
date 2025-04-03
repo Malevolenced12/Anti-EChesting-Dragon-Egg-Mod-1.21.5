@@ -2,17 +2,17 @@
 	"schemaVersion": 1,
 	"id": "noechestenderegg",
 	"version": "${version}",
-	"name": "noechestEnderegg",
+	"name": "NoechestEnderegg",
 	"description": "Ender/Dragon Egg E-chest mod for SMPs",
 	"authors": [
 		"Malevolenced"
 	],
 	"contact": {
-		"homepage": "https://malevolenced.net/",
-		"sources": "https://github.com/Malevolenced12/Anti-Ender-Egg-Echesting-1.21.5"
+		"homepage": "https://github.com/Malevolenced12/Anti-EChesting-Dragon-Egg-Mod-1.21.5",
+		"sources": "https://github.com/Malevolenced12/Anti-EChesting-Dragon-Egg-Mod-1.21.5"
 	},
 	"license": "MIT",
-	"icon": "assets/noEchestEnderegg/modicon.png",
+	"icon": "assets/noechestenderegg/modicon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
