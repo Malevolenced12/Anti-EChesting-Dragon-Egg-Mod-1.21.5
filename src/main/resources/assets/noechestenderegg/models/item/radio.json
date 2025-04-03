@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "noechestenderegg:item/radio"
+  }
+}
+
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fabric-docs-reference:item/suspicious_substance"
+  }
+}

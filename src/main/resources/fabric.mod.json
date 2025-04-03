@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Malevolenced12/Anti-Ender-Egg-Echesting-1.21.5"
 	},
 	"license": "MIT",
-	"icon": "assets/noechestenderegg/icon.png",
+	"icon": "assets/noEchestEnderegg/modicon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -22,8 +22,9 @@
 			"net.malevolenced.noechestenderegg.NoechestEndereggDataGenerator"
 		],
 		"client": [
-			"net.malevolenced.noechestenderegg.noechestEndereggClient"
-	},,
+			"net.malevolenced.noechestenderegg.NoechestEndereggClient"
+		]
+	},
 	"mixins": [
 		"noechestenderegg.mixins.json"
 	],

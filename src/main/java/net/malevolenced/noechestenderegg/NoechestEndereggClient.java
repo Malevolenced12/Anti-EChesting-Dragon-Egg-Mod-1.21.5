@@ -2,7 +2,7 @@ package net.malevolenced.noechestenderegg;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class noechestEndereggClient implements ClientModInitializer {
+public class NoechestEndereggClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
