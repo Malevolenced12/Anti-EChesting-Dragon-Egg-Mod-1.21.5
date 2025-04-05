@@ -5,7 +5,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.malevolenced.noechestenderegg.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,17 +45,11 @@ public class NoechestEnderegg implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-		Registry.register(Registries.SOUND_EVENT, Identifier.of(MOD_ID, "ksi"),
-				SoundEvent.of(Identifier.of(MOD_ID, "ksi")));
-
-		ModItems.registerModItems();
 		registerConfig();
 		registerEvents();
 		registerCommands();
-		ModItems.CustomSounds.initialize();
-	}
 
+	}
 
 	private void registerConfig() {
 		AutoConfig.register(ModConfig.class, GsonConfigSerializer::new); // Directly instantiate the serializer

@@ -5,17 +5,13 @@ This mod is made for most SMPs where the Dragon Egg is precious to all players. 
 ## Features
 - Players are unable to stash the Dragon Egg in their ender chest.
 - --- **UPDATE 1.1.0** ---
-- Added **NEW** item!! The radio is a new item in the redstone category that repeatedly plays the best song --> Thick of it by KSI
+- Actually made the mod work!
 
 ### Next update:
 - End of life
 - This mod will be discontinued
 
 More features will **NOT** be added.
-
-## Commands
-
-- **/dragonegg locate** - Allows you to locate where the Dragon Egg. (only works if you are an operator).
 
 ## Config
 You can edit the mod config by going into the `config` directory and then opening the lifestealmod.json in any text editor.
